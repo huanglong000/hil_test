@@ -37,3 +37,4 @@
 345\brak_hil.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_usart.h
 345\brak_hil.o: ..\CAN\can.h
 345\brak_hil.o: ..\delay\delay.h
+345\brak_hil.o: ..\tim\tim.h
