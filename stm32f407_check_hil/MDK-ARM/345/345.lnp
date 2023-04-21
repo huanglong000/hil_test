@@ -22,6 +22,8 @@
 "345\stm32f4xx_hal_iwdg.o"
 "345\stm32f4xx_hal_uart.o"
 "345\stm32f4xx_hal_usart.o"
+"345\stm32f4xx_hal_adc.o"
+"345\stm32f4xx_hal_adc_ex.o"
 "345\system_stm32f4xx.o"
 "345\led.o"
 "345\key.o"
@@ -30,6 +32,10 @@
 "345\can.o"
 "345\rs485.o"
 "345\brak_hil.o"
+"345\vol_basic.o"
+"345\res_ctrl.o"
+"345\adc.o"
+"345\hil7screen.o"
 --library_type=microlib --strict --scatter "345\345.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
