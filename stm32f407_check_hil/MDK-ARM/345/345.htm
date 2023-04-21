@@ -3,7 +3,7 @@
 <title>Static Call Graph - [345\345.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image 345\345.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Fri Apr 21 11:11:37 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Fri Apr 21 15:09:41 2023
 <BR><P>
 <H3>Maximum Stack Usage =        192 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1361,7 +1361,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hil_break_run
 </UL>
 
-<P><STRONG><a name="[eb]"></a>led_int</STRONG> (Thumb, 128 bytes, Stack size 32 bytes, led.o(i.led_int))
+<P><STRONG><a name="[eb]"></a>led_int</STRONG> (Thumb, 150 bytes, Stack size 32 bytes, led.o(i.led_int))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = led_int &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
@@ -1420,10 +1420,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;res_handle
 </UL>
 
-<P><STRONG><a name="[ef]"></a>relase_can_rx_data</STRONG> (Thumb, 96 bytes, Stack size 8 bytes, main.o(i.relase_can_rx_data))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = relase_can_rx_data &rArr; hil_vol_basic_can_rx
+<P><STRONG><a name="[ef]"></a>relase_can_rx_data</STRONG> (Thumb, 128 bytes, Stack size 8 bytes, main.o(i.relase_can_rx_data))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = relase_can_rx_data &rArr; res_ctrl &rArr; res_handle &rArr; power_off
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hil_vol_basic_can_rx
+<BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;res_ctrl
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hil_vol_basic_can_rx
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hil_break_can_rx
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1438,16 +1439,17 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ec]"></a>res_ctrl</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, led.o(i.res_ctrl))
+<P><STRONG><a name="[ec]"></a>res_ctrl</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, led.o(i.res_ctrl))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = res_ctrl &rArr; res_handle &rArr; power_off
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;res_handle
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LedOut5026
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;relase_can_rx_data
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[f3]"></a>res_handle</STRONG> (Thumb, 134 bytes, Stack size 24 bytes, led.o(i.res_handle))
+<P><STRONG><a name="[f3]"></a>res_handle</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, led.o(i.res_handle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = res_handle &rArr; power_off
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;power_off
